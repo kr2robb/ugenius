@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>优竞 Ugenius</title>
+    <script type="module" crossorigin src="/assets/index-C2NSnFIC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BAsYTxWM.css">
+  </head>
+  <body>
+    <!-- 顶栏 -->
+    <header class="topbar">
+      <button class="brand" id="brandHome" type="button" title="返回首页" aria-label="返回首页"><img class="brand-logo" src="./logo-wordmark.png" alt="优竞 Ugenius"></button>
+
+      <button class="back-btn" id="backBtn" hidden><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>返回</button>
+
+      <!-- 游戏名选择器：点击展开功能菜单 -->
+      <div class="game-picker">
+        <button class="game-btn" id="gameBtn">
+          <img class="game-logo" src="./valorant-logo.svg" alt="无畏契约" height="16" />
+          <span class="game-name">无畏契约</span>
+          <span class="caret" aria-hidden="true"></span>
+        </button>
+        <div class="game-menu" id="gameMenu" hidden>
+          <button class="menu-item" data-panel="community"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>社区交流</button>
+          <button class="menu-item" data-panel="team"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>组队大厅</button>
+          <button class="menu-item" data-panel="esports"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zM7 5H4v3a3 3 0 0 0 3 3M17 5h3v3a3 3 0 0 1-3 3"/></svg>无畏赛事</button>
+          <button class="menu-item" data-panel="tutorial"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>特工学院</button>
+          <button class="menu-item" data-panel="review"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="16" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg>赛后复盘</button>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- 个人中心 -->
+      <button class="avatar" id="avatarBtn" title="个人中心"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+    </header>
+
+    <!-- 首页 -->
+    <main id="home" class="panel">
+      <div class="home-main">
+        <div class="home-hero">
+          <div class="home-logo-wrap" id="homeLogoWrap">
+            <img class="home-logo" src="./logo-wordmark.png" alt="优竞 Ugenius">
+            <img class="home-logo home-logo-gold" data-gold-radius="150" src="./logo-wordmark-gold.png" alt="" aria-hidden="true">
+            <img class="home-logo home-logo-gold" data-gold-radius="115" src="./logo-wordmark-gold.png" alt="" aria-hidden="true">
+            <img class="home-logo home-logo-gold" data-gold-radius="80" src="./logo-wordmark-gold.png" alt="" aria-hidden="true">
+            <img class="home-logo home-logo-gold" data-gold-radius="45" src="./logo-wordmark-gold.png" alt="" aria-hidden="true">
+            <span class="home-logo-glow" aria-hidden="true"></span>
+          </div>
+          <div class="home-subtitle">无畏契约 · 竞技游戏智能助手</div>
+        </div>
+        <div class="home-entries">
+        <button class="home-entry" data-panel="community"><svg class="home-entry-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>社区交流</span></button>
+        <button class="home-entry" data-panel="team"><svg class="home-entry-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>组队大厅</span></button>
+        <button class="home-entry" data-panel="esports"><svg class="home-entry-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zM7 5H4v3a3 3 0 0 0 3 3M17 5h3v3a3 3 0 0 1-3 3"/></svg><span>无畏赛事</span></button>
+        <button class="home-entry" data-panel="tutorial"><svg class="home-entry-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>特工学院</span></button>
+        <button class="home-entry" data-panel="review"><svg class="home-entry-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="16" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg><span>赛后复盘</span></button>
+        </div>
+      </div>
+      <!-- 广告位：预留留白，后续放广告图 -->
+      <div class="home-ad-slot" aria-hidden="true"></div>
+    </main>
+
+    <!-- 赛后复盘 -->
+    <main id="review" class="panel" hidden>
+      <!-- 视频：占 1/3 -->
+      <section class="video-area" id="videoArea">
+        <input type="file" id="fileInput" accept="video/*" hidden />
+        <div class="video-empty" id="videoEmpty">
+          <p class="upload-hint">把 POV 视频拖到这里，或点击下方按钮选择</p>
+          <button class="btn primary" id="pickBtn">选择视频</button>
+        </div>
+        <video id="video" controls hidden></video>
+        <button class="btn accent analyze-btn" id="analyzeBtn" hidden>✨ 开始 AI 复盘</button>
+      </section>
+
+      <!-- 复盘建议：占 2/3 -->
+      <section class="review-area">
+        <div class="review-head">
+          <div class="review-title">复盘建议</div>
+          <div class="node-bar" id="nodeBar"><!-- 节点时间轴 --></div>
+        </div>
+        <div class="review-body">
+          <!-- 左 1/3：图示（未来画 SVG 战术图，先留空） -->
+          <div class="review-left" id="diagramBox"></div>
+          <!-- 右 2/3：文字建议 -->
+          <div class="review-right" id="adviceBox"><!-- 按节点渲染 --></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 社区交流 -->
+    <main id="community" class="panel" hidden>
+      <div class="community-head">
+        <h2 class="community-title">社区交流</h2>
+        <button class="btn primary" id="newPostBtn">＋ 发帖</button>
+      </div>
+      <div class="community-toolbar">
+        <div class="tag-filter" id="tagFilter">
+          <button class="tag-btn active" data-tag="">全部</button>
+          <button class="tag-btn" data-tag="残局">残局</button>
+          <button class="tag-btn" data-tag="攻略">攻略</button>
+          <button class="tag-btn" data-tag="讨论">讨论</button>
+          <button class="tag-btn" data-tag="POV">POV</button>
+        </div>
+        <div class="sort-switch" id="sortSwitch">
+          <button class="sort-btn active" data-sort="hot"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a6 6 0 0 0 6-6c0-3-2-5-6-12-4 7-6 9-6 12a6 6 0 0 0 6 6z"/></svg>最热</button>
+          <button class="sort-btn" data-sort="new"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>最新</button>
+        </div>
+      </div>
+      <div class="post-list" id="postList"></div>
+    </main>
+
+    <!-- 组队大厅 -->
+    <main id="team" class="panel" hidden>
+      <div class="lobby-head">
+        <h2 class="community-title">组队大厅</h2>
+        <div class="lobby-head-actions">
+          <button class="btn ghost" id="launchGameBtn"><svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="12.5" r="1"/><circle cx="18" cy="10" r="1"/><rect x="2" y="6" width="20" height="12" rx="5"/></svg>启动游戏</button>
+          <button class="btn primary" id="newLobbyBtn">＋ 发组队</button>
+        </div>
+      </div>
+      <div class="lobby-tabs" id="lobbyTabs">
+        <button class="lobby-tab active" data-cat="娱乐"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="12.5" r="1"/><circle cx="18" cy="10" r="1"/><rect x="2" y="6" width="20" height="12" rx="5"/></svg>娱乐</button>
+        <button class="lobby-tab" data-cat="竞技"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zM7 5H4v3a3 3 0 0 0 3 3M17 5h3v3a3 3 0 0 1-3 3"/></svg>竞技</button>
+      </div>
+      <div class="lobby-list" id="lobbyList"></div>
+    </main>
+
+    <!-- 个人中心 -->
+    <main id="profile" class="panel" hidden>
+      <!-- 未登录：登录/注册 -->
+      <div class="profile-auth" id="profileAuth">
+        <h2 class="community-title">登录 / 注册</h2>
+        <p class="auth-hint">登录后记录你的复盘、帖子和组队</p>
+        <div class="auth-oauth">
+          <button class="btn primary" id="wxLoginBtn">微信登录</button>
+          <button class="btn primary" id="qqLoginBtn">QQ 登录</button>
+        </div>
+        <div class="auth-divider">或</div>
+        <div class="auth-local">
+          <input class="post-title-input" id="localNickname" placeholder="输入昵称直接进入（本地账号）" maxlength="20" />
+          <button class="btn ghost" id="localLoginBtn">进入</button>
+        </div>
+      </div>
+
+      <!-- 已登录：个人资料 -->
+      <div class="profile-main" id="profileMain" hidden>
+        <div class="profile-head">
+          <img class="profile-avatar" id="profileAvatar" alt="头像" />
+          <div class="profile-info">
+            <div class="profile-name" id="profileName"></div>
+            <div class="profile-rank" id="profileRank"></div>
+            <div class="profile-agents" id="profileAgents"></div>
+          </div>
+          <button class="btn ghost" id="editProfileBtn">编辑资料</button>
+        </div>
+        <div class="profile-bio" id="profileBio"></div>
+
+        <div class="profile-cards">
+          <div class="profile-card" data-card="game">
+            <div class="profile-card-inner">
+              <div class="profile-card-face front">
+                <div class="card-title">游戏画像</div>
+                <div class="card-game" id="cardGame"></div>
+              </div>
+              <div class="profile-card-face back">
+                <div class="card-title">游戏画像</div>
+                <button class="btn primary" data-action="open-card" data-card="game">查看详情</button>
+              </div>
+            </div>
+          </div>
+          <div class="profile-card" data-card="replay">
+            <div class="profile-card-inner">
+              <div class="profile-card-face front">
+                <div class="card-title">我的复盘</div>
+                <div class="card-replay" id="cardReplay"></div>
+              </div>
+              <div class="profile-card-face back">
+                <div class="card-title">我的复盘</div>
+                <button class="btn primary" data-action="open-card" data-card="replay">查看详情</button>
+              </div>
+            </div>
+          </div>
+          <div class="profile-card" data-card="post">
+            <div class="profile-card-inner">
+              <div class="profile-card-face front">
+                <div class="card-title">我的帖子</div>
+                <div class="card-post" id="cardPost"></div>
+              </div>
+              <div class="profile-card-face back">
+                <div class="card-title">我的帖子</div>
+                <button class="btn primary" data-action="open-card" data-card="post">查看详情</button>
+              </div>
+            </div>
+          </div>
+          <div class="profile-card" data-card="lobby">
+            <div class="profile-card-inner">
+              <div class="profile-card-face front">
+                <div class="card-title">我的组队</div>
+                <div class="card-lobby" id="cardLobby"></div>
+              </div>
+              <div class="profile-card-face back">
+                <div class="card-title">我的组队</div>
+                <button class="btn primary" data-action="open-card" data-card="lobby">查看详情</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 无畏赛事 -->
+    <main id="esports" class="panel" hidden>
+      <div class="esports-head">
+        <h2 class="community-title">无畏赛事</h2>
+        <div class="esports-subtitle">每天的比赛 · 点进一场给选手和教练打分</div>
+      </div>
+      <div class="esports-view">
+        <div class="match-list" id="matchList"></div>
+      </div>
+    </main>
+
+    <!-- 教学 -->
+    <main id="tutorial" class="panel" hidden>
+      <div class="tutorial-head">
+        <h2 class="community-title">特工学院</h2>
+        <div class="tutorial-tabs">
+          <button class="tutorial-tab active" data-level="基础">基础</button>
+          <button class="tutorial-tab" data-level="进阶">进阶</button>
+          <button class="tutorial-tab" data-level="顶分">顶分教学</button>
+        </div>
+      </div>
+      <div class="tutorial-list" id="tutorialList"></div>
+    </main>
+
+    <!-- 发帖弹窗 -->
+    <div class="modal-backdrop" id="postModal" hidden>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3>发布帖子</h3>
+          <button class="modal-close" data-close="postModal" aria-label="关闭"></button>
+        </div>
+        <input class="post-title-input" id="postTitle" placeholder="标题" maxlength="40" />
+        <textarea class="post-content-input" id="postContent" placeholder="分享你的经验、问题或高光时刻..." rows="5"></textarea>
+        <div class="post-media">
+          <div class="post-media-btns">
+            <button class="btn ghost small" id="addImageBtn" type="button"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>加图片</button>
+            <button class="btn ghost small" id="addVideoBtn" type="button"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="16" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg>加视频</button>
+          </div>
+          <div class="post-image-previews" id="imagePreviews"></div>
+          <div class="post-video-preview" id="videoPreview" hidden></div>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" multiple hidden />
+        <input type="file" id="videoInput" accept="video/*" hidden />
+        <div class="tag-select" id="tagSelect"></div>
+        <div class="modal-actions">
+          <button class="btn ghost" data-close="postModal">取消</button>
+          <button class="btn primary" id="publishBtn">发布</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 帖子详情弹窗 -->
+    <div class="modal-backdrop" id="detailModal" hidden>
+      <div class="modal-card wide">
+        <div class="modal-head">
+          <button class="modal-close" data-close="detailModal" aria-label="关闭"></button>
+        </div>
+        <div id="detailContent"></div>
+        <div class="comment-section">
+          <div class="comment-list" id="commentList"></div>
+          <div class="comment-input-row">
+            <input class="comment-input" id="commentInput" placeholder="写下你的评论..." />
+            <button class="btn primary" id="commentBtn">评论</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 发组队弹窗 -->
+    <div class="modal-backdrop" id="lobbyModal" hidden>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h3>发布组队</h3>
+          <button class="modal-close" data-close="lobbyModal" aria-label="关闭"></button>
+        </div>
+        <div class="lobby-cat-select" id="lobbyCatSelect">
+          <button class="cat-option active" data-cat="娱乐"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="12.5" r="1"/><circle cx="18" cy="10" r="1"/><rect x="2" y="6" width="20" height="12" rx="5"/></svg>娱乐</button>
+          <button class="cat-option" data-cat="竞技"><svg class="btn-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0zM7 5H4v3a3 3 0 0 0 3 3M17 5h3v3a3 3 0 0 1-3 3"/></svg>竞技</button>
+        </div>
+        <div class="lobby-field-label">模式</div>
+        <div class="lobby-mode-select" id="lobbyModeSelect"></div>
+        <div class="lobby-field-label" id="lobbyRankLabel" hidden>段位要求</div>
+        <div class="lobby-rank-select" id="lobbyRankSelect" hidden></div>
+        <div class="lobby-field-label">缺几个人</div>
+        <div class="lobby-need" id="lobbyNeed"></div>
+        <textarea class="post-content-input" id="lobbyNote" placeholder="备注（可选）：来会打残局的，晚上开黑..." rows="2"></textarea>
+        <div class="modal-actions">
+          <button class="btn ghost" data-close="lobbyModal">取消</button>
+          <button class="btn primary" id="lobbyPublishBtn">发布</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 编辑资料弹窗 -->
+    <div class="modal-backdrop" id="editProfileModal" hidden>
+      <div class="modal-card wide">
+        <div class="modal-head">
+          <h3>编辑资料</h3>
+          <button class="modal-close" data-close="editProfileModal" aria-label="关闭"></button>
+        </div>
+        <div class="lobby-field-label">头像</div>
+        <div class="avatar-picker" id="avatarPicker"></div>
+        <div class="lobby-field-label">昵称</div>
+        <input class="post-title-input" id="editNickname" placeholder="昵称" maxlength="20" />
+        <div class="lobby-field-label">段位</div>
+        <div class="lobby-rank-select" id="editRankSelect"></div>
+        <div class="lobby-field-label">常玩特工（最多 3 个）</div>
+        <div class="avatar-picker" id="agentPicker"></div>
+        <div class="lobby-field-label">简介</div>
+        <textarea class="post-content-input" id="editBio" placeholder="一句话介绍自己..." rows="2"></textarea>
+        <div class="modal-actions">
+          <button class="btn ghost" data-close="editProfileModal">取消</button>
+          <button class="btn primary" id="saveProfileBtn">保存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 比赛详情弹窗 -->
+    <div class="modal-backdrop" id="matchModal" hidden>
+      <div class="modal-card xwide">
+        <div class="modal-head">
+          <button class="modal-close" data-close="matchModal" aria-label="关闭"></button>
+        </div>
+        <div id="matchDetail"></div>
+      </div>
+    </div>
+
+    <!-- 选手/教练打分弹窗 -->
+    <div class="modal-backdrop" id="playerModal" hidden>
+      <div class="modal-card xwide">
+        <div class="modal-head">
+          <button class="modal-close" data-close="playerModal" aria-label="关闭"></button>
+        </div>
+        <div id="playerDetail"></div>
+      </div>
+    </div>
+
+    <!-- 游戏画像详情弹窗 -->
+    <div class="modal-backdrop" id="gameProfileModal" hidden>
+      <div class="modal-card xwide">
+        <div class="modal-head">
+          <button class="modal-close" data-close="gameProfileModal" aria-label="关闭"></button>
+        </div>
+        <div id="gameDetail"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

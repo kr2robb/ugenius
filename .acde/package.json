@@ -1,0 +1,44 @@
+{
+  "name": "game-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "acde": {
+    "apiLevel": 1,
+    "apps": [
+      {
+        "id": "game-assistant",
+        "label": "优竞 Ugenius",
+        "icon": "game",
+        "entry": "/app/game-assistant/index.html",
+        "capabilities": {
+          "fs": true,
+          "launch": true,
+          "open": true,
+          "openFiles": true
+        },
+        "heapMb": 1024,
+        "size": [
+          1100,
+          720
+        ],
+        "multiple": true,
+        "requests": [
+          "analyze-replay",
+          "open-post"
+        ],
+        "backend": {
+          "entry": "/app/game-assistant/backend/server.js",
+          "port": 3000
+        }
+      }
+    ],
+    "assets": {
+      "/app/game-assistant/": [
+        "web"
+      ],
+      "/app/game-assistant/backend/": [
+        "backend"
+      ]
+    }
+  }
+}

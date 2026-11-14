@@ -1,0 +1,26 @@
+{
+  // acde 应用配置：一个窗口应用。详见 config.schema.json。
+  "$schema": "./node_modules/@dopame/acde-api/config.schema.json",
+  "type": "app",
+  "id": "game-assistant",
+  "label": "优竞 Ugenius",
+  "icon": "game",
+  "entry": "index.html",
+  "framework": "vite",
+  "size": [1100, 720],
+  "heapMb": 1024,
+  // 允许多实例窗口（帖子「新窗口打开」用）
+  "multiple": true,
+  "capabilities": {
+    // fs：应用文件系统访问（替代 IndexedDB，用于本地存储复盘记录等）
+    "fs": true,
+    // launch：启动本地程序（复盘完一键拉起无畏契约）
+    "launch": true,
+    // open：打开外部链接 / 文件
+    "open": true,
+    // openFiles：openPath/handlers（用系统默认程序打开回放文件）
+    "openFiles": true
+  },
+  // 自定义 request kind（open-file / open-link 是系统请求，不用声明）
+  "requests": ["analyze-replay", "open-post"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "game-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "竞技游戏智能助手 —— Dopame OS 原创应用（先做无畏契约赛后复盘）",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:backend": "node dev-backend.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@dopame/acde-api": "https://calbin-1318886512.cos.ap-beijing.myqcloud.com/pkgs/acdert/0.0.9/acde-api-0.0.9.tar.gz",
+    "vite": "^8.3.8"
+  }
+}
