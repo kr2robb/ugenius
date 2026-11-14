@@ -1,7 +1,9 @@
-# 游戏智能助手（game-assistant）
+# 优竞 Ugenius（game-assistant）
 
 Dopame OS 原创应用 —— 竞技游戏智能助手（先做《无畏契约》赛后复盘）。
 
+> 代码仓库：https://github.com/kr2robb/ugenius
+> 提交文档：`项目说明.md` ｜ 路演 PPT：`优竞Ugenius-路演PPT.pptx`
 > 产品构想与决策记录在桌面 `C:\Users\24996\Desktop\README.md`，本文件只讲技术。
 
 ## 技术栈
